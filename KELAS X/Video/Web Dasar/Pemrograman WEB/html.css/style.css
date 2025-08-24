@@ -8,6 +8,12 @@
     margin: auto;
 }
 
+.warna {
+    background-image: linear-gradient(red, yellow);
+    color: white;
+    
+}
+
 img {
     width: 100px;
 }
