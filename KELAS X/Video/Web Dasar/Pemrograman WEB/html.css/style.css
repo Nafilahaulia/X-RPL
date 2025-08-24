@@ -2,6 +2,18 @@ body {
     background-color: aqua;
 }
 
+div {
+    border: 2px solid red;
+    margin: 100px 0px 0px 50px;
+    /* margin-left: 200px; */
+
+    padding-top: 20px;
+}
+
+nav {
+    border: 3px solid black; 
+}
+
 img {
     width: 200px;
 }
@@ -20,6 +32,8 @@ img {
 
 #bekgron {
     background-color: red;
+    position: sticky;
+    top: 200px;
 }
 
 #kiri {
