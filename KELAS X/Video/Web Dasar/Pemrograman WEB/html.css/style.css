@@ -3,12 +3,17 @@
 
 }
 
+.wadah {
+    width: 700px;
+    margin: auto;
+}
+
 img {
     width: 100px;
 }
 
 .card {
-    width: 200px;
+    width: 30%;
 }
 
 .horizontal { 
