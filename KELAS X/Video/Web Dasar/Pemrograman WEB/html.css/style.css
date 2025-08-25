@@ -8,6 +8,15 @@
     margin: auto;
 }
 
+h2:hover {
+    background-color: red;
+}
+
+p::first-letter {
+    color: #f00;
+    font-size: xx-large;
+}
+
 .display {
     display: inline-block;
     padding: 3%;
