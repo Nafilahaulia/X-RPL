@@ -12,6 +12,10 @@ h2:hover {
     background-color: red;
 }
 
+.card:target {
+    background-color: yellow;
+}
+
 p::first-letter {
     color: #f00;
     font-size: xx-large;
