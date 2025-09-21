@@ -1,24 +1,18 @@
 <nav>
     <ul>
-        <li>Kontak</li>
-        <li>Sejarah</li>
-        <li>Jurusan</li>
+        <li><a href="?menu=Kontak">Kontak</a></li>
+        <li><a href="?menu=Sejarah">Sejarah</a></li>
+        <li><a href="?menu=Jurusan">Jurusan</a></li>
     </ul>
 </nav>
 
 <?php
 
-    if ( isset ($_POST['kirim']) ) {
+    if (isset($_GET['menu'])) {
+        $menu = $_GET['menu'];
 
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
-        echo $email;
-        echo '<br>';
-        echo $password;
+        require_once $menu.'.php';
     }
 
-    
-
-
 ?>
+
