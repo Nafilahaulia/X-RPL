@@ -5,7 +5,7 @@
     $db = new DB;
 
     if (isset($_SESSION['user'])) {
-        header("location:http:login.php");
+        header("location:login.php");
     }
     if (isset($_GET['log'])) {
         session_destroy();
@@ -32,7 +32,8 @@
 
             <div class="col-md-9">
                 <div class="float-right mt-4"><a href="?log=logout"> logout</a></div>
-                <div class="float-right mt-4 mr-4"> user</div>
+                <div class="float-right mt-4 mr-4"> $_SESSION['user'] <a href="?f=user&m=updateuser&id=<?php echo $_SESSION['iduser']?>"><?php echo $_SESSION['user']; ?></a> </div>
+                
             </div>
 
         </div>
@@ -57,9 +58,7 @@
                         $f=$_GET['f'];
                         $m=$_GET['m'];
 
-                        $file = '../'.$f.'/'.$m.'.php';
-
-                        require_once $file;
+                        require_once "$f/$m.php";
                     }
                 
                 ?>
