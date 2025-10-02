@@ -1,60 +1,46 @@
-<?php
-
-    class DB{
-
-        // properti
+<?php 
+    class DB {
+        // Properti
         public $host = "127.0.0.1";
         private $user = "root";
         private $password = "";
-        private $database = "dbrestoran";
+        private $database = "dbrestaurant";
 
-        public function __construct()
-        {
-            echo "function construct";
+        public function __construct() {
+            echo "Function Construct";
         }
 
-        // method
-        public function selectData()
-        {
-            echo 'select data';
+        // Method
+        public function selectData() {
+            echo "Select Data";
         }
 
-        public function getDatabase()
-        {
-            return $this->database;
+        public function getDatabase() {
+            echo $this->database;
         }
 
-        public function tampil()
-        {
-            $this->selectData();        
+        public function tampil() {
+            $this->selectData();
         }
 
-        public static function insertData()
-        {
-            echo "static function";
+        public static function insertData() {
+            echo "Static Function";
         }
-
-
     }
 
     DB::insertData();
 
     $db = new DB;
-
-    // echo '<br>';
+    echo "<br>";
 
     // $db->selectData();
-
-    // echo '<br>';
+    // echo "<br>";
 
     // echo $db->host;
+    // echo "<br>";
 
-    // echo '<br>';
-
-    // echo $db->getDatabase().'<br>';
+    // echo $db->getDatabase();
+    // echo "<br>";
 
     // $db->tampil();
-
-
-
 ?>

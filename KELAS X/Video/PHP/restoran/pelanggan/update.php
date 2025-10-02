@@ -1,20 +1,18 @@
 <?php
 
-    if (isset($_GET['id'])) {
-        $id=$_GET['id'];
+    if (isset($_GET["id"])) {
+        $id=$_GET["id"];
 
-        $row = $db->getITEM("SELECT * FROM tblpelanggan WHERE idpelanggan = $id ");
-
-        if ($row['aktif']==0) {
+        $row = $db->getITEM("SELECT * FROM tblpelanggan WHERE idpelanggan = $id");
+        if ($row["aktif"] == 0) {
             $aktif = 1;
         }else {
             $aktif = 0;
         }
 
-        $sql = "UPDATE tblpelanggan SET aktif=$aktif WHERE idpelanggan=$id";
-        $db->runSQL($sql);
+        $sql = "UPDATE tblpelanggan SET aktif = $aktif WHERE idpelanggan = $id";
+        $db->runSQL("$sql");
 
-        header("location:?f=pelanggan&m=select");
+        header("location:http://localhost/KELAS%20X/Video/PHP/restoran");
     }
-
 ?>
