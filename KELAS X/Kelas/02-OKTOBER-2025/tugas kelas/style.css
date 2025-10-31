@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* tinggi navbar */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(120deg,#9a93c4,#4e5194, #1417c9);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #b2bef1;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(74, 7, 197, 0.5);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+
+header h2{
+    color: #d1a7df;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    font-weight: bold;
+    width: 95%;
+    aspect-ratio: 1 / 0; /* gambar persegi */
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header nav ul li a:hover{
+    color: #e6bff3;
+}
+
+/* Section umum */
+section {
+    padding: 120px 50px 80px; /* ada jarak biar nggak ketutup navbar */
+    min-height: 100vh;
+    text-align: center;
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 200px;
+    height: 230px;
+    border-radius: 50%; /*lingkaran*/
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Identitas */
+#identitas h1 span {
+    color: #95f5f8;
+}
+
+#identitas p {
+    max-width: 900px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.9;
+}
+
+/* skill */
+/* #skill {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 50px 20px;
+    margin-top: 50px;
+} */
+
+#skill h2 {
+    font-size: 2em;
+    color: #D78FEE;
+    margin-bottom: 20px;
+}
+
+#skill h3 {
+    margin-top: 20px;
+    color: #fff;
+}
+
+#skill ul {
+    margin-top: 10px;
+    list-style: disc;
+    display: inline-block;
+    text-align: left;
+}
+
+/* Riwayat Pendidikan */
+#riwayat {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#riwayat h2 {
+  font-size: 2em;
+  color: #D78FEE;
+  margin-bottom: 30px;
+}
+
+/* Grid 2 kolom sejajar */
+.riwayat-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Kartu setiap item */
+.riwayat-item {
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Gambar 1:1 dengan bayangan rapi */
+.riwayat-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* gambar persegi */
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Nama sekolah */
+.riwayat-item p {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #b2bef1;
+}
+
+/* Efek hover */
+.riwayat-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(215, 143, 238, 0.7);
+}
+
+/* Responsif HP */
+@media (max-width: 768px) {
+  .riwayat-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* Pengalaman*/
+/* #pengalaman {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 50px 20px;
+    margin-top: 50px;
+} */
+
+#pengalaman h2 {
+    font-size: 2em;
+    color: #D78FEE;
+    margin-bottom: 20px;
+}
+
+/* #pengalaman ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#pengalaman ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+#pengalaman ul li i {
+    color: #1417c9;
+    font-size: 1.2em;
+} */
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #eee;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Desain */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 25px;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 10px;
+        gap: 15px;
+    }
+
+    section {
+        padding: 100px 20px 60px;
+    }
+
+    .profile-photo img {
+        width: 160px;
+        height: 180px;
+    }
+
+    #skill ul {
+        font-size: 0.95em;
+    }
+
+    .riwayat-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h2 {
+        font-size: 1.2em;
+    }
+
+    #riwayat h2, #skill h2, #pengalaman h2 {
+        font-size: 1.6em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+/* Garis pemisah antar section */
+section {
+    position: relative;
+    padding: 120px 50px 80px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Tambahkan garis di bawah setiap section */
+section:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 4px;
+    background: linear-gradient(90deg, #9a93c4, #D78FEE, #1417c9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(215, 143, 238, 0.7);
+}
