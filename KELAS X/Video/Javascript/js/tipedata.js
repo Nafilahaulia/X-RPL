@@ -20,7 +20,7 @@ console.log(` 'SMKN 2 Buduran' ${angka} ${kata} ${isi}`);
 
 console.log("SMKN 2 Buduran" + angka + kata + " " + isi);
 
-let kondisi = true;
+let kondisi = false;
 
 console.log(kondisi);
 
@@ -30,4 +30,4 @@ console.log(age);
 
 let kosong;
 
-console.logz(kosong);
+console.log(kosong);
