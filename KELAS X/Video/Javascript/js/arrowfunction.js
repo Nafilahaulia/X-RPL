@@ -24,7 +24,7 @@ let hasil = (a) => a * 2;
 
 console.log(hasil(4));
 
-let lagi = ()=>console.log("coba lagi");
+let lagi = () => console.log("coba lagi");
 
 lagi();
 
