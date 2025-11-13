@@ -8,13 +8,19 @@ let nilai = [
 ]
 
 let nama = ["budi", "joni", "tejo", "siti"];
-nama.push("ani"), "roma";
+// nama.push("ani"), "roma";
 
 // console.log(nama.shift());
 
-nama.unshift("bobi", "roki");
+// nama.unshift("bobi", "roki");
 
-console.log(nama.slice(0, 8));
+// console.log(nama.slice(0, 3));
+
+let mapel = ["ipa", "bahasa", "matematika"];
+
+// console.log(nama.concat(mapel));
+
+// console.log(nama.concat(['ips', 'ipa', 'sejarah']));
 
 // console.log(nama.splice(5, 2));
 
@@ -23,4 +29,27 @@ console.log(nama.slice(0, 8));
 // nama.splice(0, 3);
 
 // console.log(nilai[0].nama);
-console.log(nama);
+// console.log(nama);
+
+// for (let index = 0; index < nama.length; index++) {
+//     console.log = (nama[index]);
+    
+// }
+
+// nama.forEach(function (a) {
+//     console.log(a);
+// });
+
+// nama.forEach((a) => console.log(a));
+
+// nilai.filter(function (a) {
+//     if (a.ipa > 80) {
+//         console.log(a);
+//     }
+// });
+
+// console.log(nilai);
+
+nilai.filter((a) => 
+    a.ipa > 80 && a.matematika > 80 ? console.log(a.nama) : null
+);
