@@ -1,4 +1,30 @@
 $(document).ready(function() {
+    let id ="";
+    let pelanggan ="";
+    let alamat ="";
+    let telp ="";
+
+    $("#submit").click(function (e) {
+        e.preventDefault();
+        id = $("#id").val();
+        pelanggan = $("#pelanggan").val();
+        alamat = $("#alamat").val();
+        telp = $("#telp").val();
+
+        if (id == "") {
+            insertData();
+        } else {
+            updateData();
+        }
+
+        $("#id").val("");
+        $("#pelanggan").val("");
+        $("#alamat").val("");
+        $("telp").val("");
+
+        
+    });
+
     function selectData() {
        $.ajax({
         type: "get",
@@ -21,7 +47,25 @@ $(document).ready(function() {
        });
     }
     function selectData() {
-        alert("insert");
+        let dataPelanggan = {
+            pelanggan : pelanggan,
+            alamat : alamat,
+            telp : telp
+        }
+
+        $.ajax({
+            type: "post",
+            url: "php/insert.php",
+            data: JSON.stringify(dataPelanggan),
+            // dataType: "dataType",
+            success: function (response) {
+                let out = `<p>${response}</p>`
+                $("#msg").html(out);
+            }
+        });
+
+        selectData();
+
     }
     function selectData() {
         alert("delete");

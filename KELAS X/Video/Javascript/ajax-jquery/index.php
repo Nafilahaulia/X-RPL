@@ -17,23 +17,27 @@
                         <h2>Input Data Pelanggan</h2>
                     </div>
                     <div class="row">
+                        <div id="msg">
+
+                        </div>
                         <form>
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label"Pelanggan</label>
-                                <input type="email" class="form-control" id="pelanggan" aria-describedby="emailHelp">
+                                <input type="email" class="form-control" id="id" required aria-describedby="emailHelp">
+                                <label for="exampleInputEmail1" class="form-label">Pelanggan</label>
+                                <input type="email" class="form-control" id="pelanggan" required aria-describedby="emailHelp">
                                 <div id="emailHelp" class="form-text">HARUS DI ISI</div>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Alamat</label>
-                                <input type="password" class="form-control" id="alamat">
+                                <input type="password" class="form-control" id="alamat" required>
                                 <div id="emailHelp" class="form-text">HARUS DI ISI</div>
                             </div>  
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Telp</label>
-                                <input type="password" class="form-control" id="telp">
+                                <input type="password" class="form-control" id="telp" required>
                                 <div id="emailHelp" class="form-text">HARUS DI ISI</div>
                             </div>  
-                            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" id="submit" class="btn btn-primary">Simpan</button>
                         </form>
                     </div>
                 </div>
