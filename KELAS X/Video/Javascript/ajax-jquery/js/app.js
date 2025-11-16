@@ -20,9 +20,12 @@ $(document).ready(function() {
         $("#id").val("");
         $("#pelanggan").val("");
         $("#alamat").val("");
-        $("telp").val("");
+        $("telp").val(""); 
+    });
 
-        
+    $("tbody").on("click",".btn-del", function () {
+        let id = $(this).attr("data-id");
+        deleteData(id);
     });
 
     function selectData() {
@@ -39,6 +42,7 @@ $(document).ready(function() {
                     <td>${val.pelanggan}</td>
                     <td>${val.alamat}</td>
                     <td>${val.telp}</td>
+                    <td><button type="button" class="btn btn-danger btn-del" data-id=${val.idpelanggan}>DEL</button></td>
                 </tr>`;
             });
 
@@ -56,6 +60,7 @@ $(document).ready(function() {
         $.ajax({
             type: "post",
             url: "php/insert.php",
+            cache:false,
             data: JSON.stringify(dataPelanggan),
             // dataType: "dataType",
             success: function (response) {
@@ -67,10 +72,27 @@ $(document).ready(function() {
         selectData();
 
     }
-    function selectData() {
-        alert("delete");
+    function deleteData(id) {
+        let idpelanggan = {
+            idpelanggan : id
+            
+        }
+
+        $.ajax({
+            type: "post",
+            url: "php/delete.php",
+            cache:false,
+            data: JSON.stringify(idpelanggan),
+            // dataType: "dataType",
+            success: function (response) {
+                let out = `<p>${response}</p>`
+                $("#msg").html(out);
+            }
+        });
+
+        selectData();
     }
-    function selectData() {
+    function updateData() {
         alert("update");
     }
 
