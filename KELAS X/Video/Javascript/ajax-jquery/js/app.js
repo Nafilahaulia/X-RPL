@@ -28,10 +28,40 @@ $(document).ready(function() {
         deleteData(id);
     });
 
+    $("tbody").on("click",".btn-ubah", function () {
+        let id = $(this).attr("data-id");
+        selectUpdate(id);
+    });
+
+    function selectUpdate(id) {
+        let idpelanggan = {
+            idpelanggan : id
+            
+        }
+
+        $.ajax({
+            type: "post",
+            url: "php/selectupdate.php",
+            cache:false,
+            data: JSON.stringify(idpelanggan),
+            // dataType: "dataType",
+            success: function (response) {
+                let data = JSON.parse(response);
+
+                $("#id").val(data.idpelanggan);
+                $("#pelanggan").val(data.pelanggan);
+                $("#alamat").val(data.alamat);
+                $("telp").val(data.telp); 
+
+            }
+        });
+    }
+
     function selectData() {
        $.ajax({
         type: "get",
         url: "php/select.php",
+            cache:false,
         dataType: "json",
         success: function (response) {
             let out = "";
@@ -43,6 +73,7 @@ $(document).ready(function() {
                     <td>${val.alamat}</td>
                     <td>${val.telp}</td>
                     <td><button type="button" class="btn btn-danger btn-del" data-id=${val.idpelanggan}>DEL</button></td>
+                    <td><button type="button" class="btn btn-warning btn-ubah" data-id=${val.idpelanggan}>UBAH</button></td>
                 </tr>`;
             });
 
