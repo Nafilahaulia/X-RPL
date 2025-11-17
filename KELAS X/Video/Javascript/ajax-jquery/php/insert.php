@@ -19,7 +19,3 @@ if (!empty($pelanggan) and !empty($alamat) and !empty($telp)) {
 } else {
     echo "Data kosong";
 }
-
-
-
-

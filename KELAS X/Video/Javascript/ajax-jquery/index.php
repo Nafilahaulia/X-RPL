@@ -22,9 +22,9 @@
                         </div>
                         <form>
                             <div class="mb-3">
-                                <input type="email" class="form-control" id="id" required aria-describedby="emailHelp">
+                                <input type="text" hidden class="form-control" id="id" required aria-describedby="emailHelp">
                                 <label for="exampleInputEmail1" class="form-label">Pelanggan</label>
-                                <input type="email" class="form-control" id="pelanggan" required aria-describedby="emailHelp">
+                                <input type="text" class="form-control" id="pelanggan" required aria-describedby="emailHelp">
                                 <div id="emailHelp" class="form-text">HARUS DI ISI</div>
                             </div>
                             <div class="mb-3">
