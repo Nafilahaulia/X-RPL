@@ -21,16 +21,31 @@ $(document).ready(function() {
         $("#id").val("");
         $("#pelanggan").val("");
         $("#alamat").val("");
-        $("telp").val(""); 
+        $("#telp").val(""); 
     });
+
+    $("#btn-tambah").click(function (e) {
+        e.preventDefault();
+
+        $("#titel").html("<p>Tambah Data</p>");
+
+        $("#id").val("");
+        $("#pelanggan").val("");
+        $("#alamat").val("");
+        $("#telp").val(""); 
+    });
+
 
     $("tbody").on("click",".btn-del", function () {
         let id = $(this).attr("data-id");
-        deleteData(id);
+        if (confirm("Yakin Akan Menghapus ?")) {
+            deleteData(id);
+        }
     });
 
     $("tbody").on("click",".btn-ubah", function () {
         let id = $(this).attr("data-id");
+        $("#titel").html("<p>Ubah Data</p>");
         selectUpdate(id);
     });
 
