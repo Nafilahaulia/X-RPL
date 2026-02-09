@@ -1,0 +1,46 @@
+Callback Function adalah function yang dikirim sebagai parameter 
+ke function lain dan dijalankan setelah proses tertentu selesai.
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Callback Function</title>
+</head>
+<body>
+
+    <h2>Contoh Callback Function</h2>
+    <button onclick="jalankan()">Klik</button>
+    <p id="hasil"></p>
+
+    <script>
+        function proses(a, cb) {
+            cb(a);
+        }
+
+        function tampil(x) {
+            document.getElementById("hasil").innerHTML = "Nilai: " + x;
+        }
+
+        function hitung(a, b, op) {
+            return op(a, b);
+        }
+
+        function tambah(x, y) {
+            return x + y;
+        }
+
+        function jalankan() {
+            proses(10, tampil);
+
+            let hasil = hitung(6, 4, tambah);
+            console.log("Hasil hitung:", hasil);
+
+            setTimeout(function() {
+                console.log("Selesai setelah 1 detik");
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>

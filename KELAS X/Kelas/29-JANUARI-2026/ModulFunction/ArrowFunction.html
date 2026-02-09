@@ -1,0 +1,40 @@
+Arrow Function adalah cara penulisan function yang lebih singkat dan 
+modern. Arrow function tidak memiliki this sendiri dan biasanya digunakan 
+untuk function sederhana.
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function</title>
+</head>
+<body>
+
+    <h2>Contoh Arrow Function</h2>
+
+    <button onclick="tampil()">Klik</button>
+    <p id="hasil"></p>
+
+    <script>
+        const sapa = () => "Halo!";
+
+        const tambah = (a, b) => a + b;
+
+        const kuadrat = x => x * x;
+
+        const diskon = h => h * 0.1;
+
+        const cekUmur = u => u >= 17 ? "Dewasa" : "Belum Dewasa";
+
+        function tampil() {
+            document.getElementById("hasil").innerHTML =
+                sapa() + "<br>" +
+                "Tambah: " + tambah(7, 3) + "<br>" +
+                "Kuadrat: " + kuadrat(4) + "<br>" +
+                "Diskon: " + diskon(100000) + "<br>" +
+                "Cek Umur: " + cekUmur(16);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+Function Declaration adalah function yang dibuat menggunakan keyword function. 
+Function ini bisa dipanggil sebelum dideklarasikan karena bersifat hoisting
+(function ditulis di bawah, kode tetap jalan) dan biasanya digunakan untuk 
+fungsi utama seperti perhitungan.
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Declaration</title>
+</head>
+<body>
+
+    <h2>Contoh Function Declaration</h2>
+
+    <button onclick="tampil()">Klik</button>
+    <p id="hasil"></p>
+
+    <script>
+        function sapa() {
+            return "Halo!";
+        }
+
+        function tambah(a, b) {
+            return a + b;
+        }
+
+        function kurang(a, b) {
+            return a - b;
+        }
+
+        function kali(a, b) {
+            return a * b;
+        }
+
+        function bagi(a, b) {
+            return a / b;
+        }
+
+        function tampil() {
+            document.getElementById("hasil").innerHTML =
+                sapa() + "<br>" +
+                "Tambah: " + tambah(10, 5) + "<br>" +
+                "Kurang: " + kurang(10, 5) + "<br>" +
+                "Kali: " + kali(10, 5) + "<br>" +
+                "Bagi: " + bagi(10, 5);
+        }
+    </script>
+
+</body>
+</html>

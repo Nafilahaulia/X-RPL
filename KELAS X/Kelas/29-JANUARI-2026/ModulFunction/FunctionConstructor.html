@@ -1,0 +1,45 @@
+Function Constructor adalah function yang digunakan untuk 
+membuat object baru dengan keyword new. Function ini biasanya 
+digunakan dalam konsep OOP JavaScript dan menggunakan this untuk 
+menyimpan properti object.
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Constructor</title>
+</head>
+<body>
+
+    <h2>Contoh Function Constructor</h2>
+    <button onclick="buatObject()">Klik</button>
+    <p id="hasil"></p>
+
+    <script>
+        function User(nama) {
+            this.nama = nama;
+        }
+
+        function Mobil(merk) {
+            this.merk = merk;
+        }
+
+        function Produk(nama, harga) {
+            this.nama = nama;
+            this.harga = harga;
+        }
+
+        function buatObject() {
+            const u1 = new User("Salma");
+            const m1 = new Mobil("Honda");
+            const p1 = new Produk("Buku", 15000);
+
+            document.getElementById("hasil").innerHTML =
+                "User: " + u1.nama + "<br>" +
+                "Mobil: " + m1.merk + "<br>" +
+                "Produk: " + p1.nama + " - Rp" + p1.harga;
+        }
+    </script>
+
+</body>
+</html>

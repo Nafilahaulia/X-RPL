@@ -1,0 +1,41 @@
+Async Function adalah function yang digunakan untuk menangani proses
+asynchronous. Function ini biasanya dikombinasikan dengan await agar 
+kode bisa menunggu hasil sebelum melanjutkan proses berikutnya.
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Async Function</title>
+</head>
+<body>
+
+    <h2>Contoh Async Function</h2>
+    <button onclick="tampil()">Klik</button>
+
+    <script>
+        async function getData() {
+            return "Data diterima";
+        }
+
+        const cek = async () => "Siap";
+
+        async function delay() {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            console.log("Delay selesai");
+        }
+
+        async function hitung(a) {
+            return a * 2;
+        }
+
+        async function tampil() {
+            console.log(await getData());
+            console.log(await cek());
+            await delay();
+            console.log("Hasil hitung:", await hitung(5));
+        }
+    </script>
+
+</body>
+</html>

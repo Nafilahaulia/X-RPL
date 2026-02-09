@@ -1,0 +1,50 @@
+Function Expression adalah function yang disimpan ke dalam variabel. 
+Function ini tidak bisa dipanggil sebelum didefinisikan dan biasanya 
+digunakan untuk membuat kode lebih fleksibel.
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Expression</title>
+</head>
+<body>
+
+    <h2>Contoh Function Expression</h2>
+
+    <button onclick="tampil()">Klik</button>
+    <p id="hasil"></p>
+
+    <script>
+        const sapa = function() {
+            return "Halo!";
+        };
+
+        const tambah = function(a, b) {
+            return a + b;
+        };
+
+        const cekGenap = function(n) {
+            return n % 2 === 0 ? "Genap" : "Ganjil";
+        };
+
+        const luasPersegi = function(s) {
+            return s * s;
+        };
+
+        const pajak = function(h) {
+            return h * 0.1;
+        };
+
+        function tampil() {
+            document.getElementById("hasil").innerHTML =
+                sapa() + "<br>" +
+                "Tambah: " + tambah(6, 4) + "<br>" +
+                "Cek Genap (7): " + cekGenap(7) + "<br>" +
+                "Luas Persegi: " + luasPersegi(5) + "<br>" +
+                "Pajak: " + pajak(100000);
+        }
+    </script>
+
+</body>
+</html>

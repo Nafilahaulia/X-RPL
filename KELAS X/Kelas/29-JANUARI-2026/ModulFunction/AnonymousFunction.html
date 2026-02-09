@@ -1,0 +1,44 @@
+Anonymous Function adalah function tanpa nama yang biasanya digunakan sebagai 
+callback atau event handler dan dijalankan langsung saat dibutuhkan.
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Anonymous Function</title>
+</head>
+<body>
+
+    <h2>Contoh Anonymous Function</h2>
+    <button id="btn">Klik Saya</button>
+
+    <script>
+        // 1. setTimeout
+        setTimeout(function() {
+            console.log("Selesai setelah 1 detik");
+        }, 1000);
+
+        // 2. Event handler tombol
+        const btn = document.getElementById("btn");
+        btn.onclick = function() {
+            alert("Tombol diklik");
+        };
+
+        // 3. forEach
+        [1, 2, 3].forEach(function(n) {
+            console.log("Angka:", n);
+        });
+
+        // 4. addEventListener
+        document.addEventListener("click", function() {
+            console.log("Halaman diklik");
+        });
+
+        // 5. IIFE (anonymous langsung jalan)
+        (function() {
+            console.log("Anonymous Function langsung dijalankan");
+        })();
+    </script>
+
+</body>
+</html>

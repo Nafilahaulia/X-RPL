@@ -1,0 +1,37 @@
+IIFE adalah function yang langsung dijalankan setelah dibuat 
+tanpa perlu dipanggil, dan biasanya digunakan untuk menjalankan 
+kode sekali jalan serta mencegah konflik variabel.
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>IIFE</title>
+</head>
+<body>
+
+    <h2>Contoh IIFE</h2>
+
+    <script>
+        (function() {
+            console.log("Mulai");
+        })();
+
+        (() => console.log("Start"))();
+
+        (function(n) {
+            console.log("Nilai:", n);
+        })(5);
+
+        (() => {
+            let x = 10;
+            console.log("X =", x);
+        })();
+
+        (function() {
+            alert("IIFE dijalankan");
+        })();
+    </script>
+
+</body>
+</html>
